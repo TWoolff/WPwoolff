@@ -1,0 +1,153 @@
+.menu-main-container, .menu-main_eng-container {
+
+  @include first-break-point {
+    display: none;
+  }
+
+  .menu {
+    display: flex; 
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  
+    li {
+      display: inline-block;
+      padding-right: 20px;
+  
+      a {
+        display: block;
+        height: 80px;
+        line-height: 80px;
+      }
+    }
+  
+    .current_page_item a {
+      color: $blue;
+    }
+  
+    .menu-item-has-children {
+      .sub-menu {
+        display: none;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 70px 70px;
+        column-gap: 60px;
+        row-gap: 0;
+        position: absolute;
+        background-color: $white;
+        border-top: 1px solid $grey;
+        height: 265px;
+        width: 100vw;
+        top: 80px;
+        left: 0;
+        right:0;
+        padding: 50px 40px;
+      }
+  
+      &:hover, &:focus-within {
+        .sub-menu {
+          display: grid;
+        }
+      }
+    }
+  }  
+  
+  .about {
+    position: relative;
+    padding-top: 140px;
+  
+    a {
+      display: block; 
+      width: fit-content;
+      padding: 10px 25px;
+      border-radius: 25px;
+      box-shadow: 0px 3px 6px rgba($black, 0.16);
+      color: $blue;
+      font-weight: 700;
+      line-height: 20px !important;
+      height: auto !important;
+  
+      &:hover {
+        background-color: $blue;
+        color: $white;
+      }
+  
+      .menu-item-description {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        font-weight: 300;
+        color: $black;
+      }
+    }
+  
+    &:before {
+      content: 'Visma Dinero';
+      position: absolute;
+      top: 0;
+      font-size: 30px;
+      font-weight: 700;
+    }
+  }
+  
+  .team, .career, .press, .contact {
+    position: relative;
+    padding-left: 70px;
+  
+    &:before {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+    }
+  
+    .menu-item-description {
+      position: absolute;
+      top: 25px;
+      left: 70px;
+      font-weight: 300;
+      line-height: 40px !important;
+    }
+  
+    a {
+      font-weight: 700;
+      line-height: 40px !important;
+      height: 40px !important;
+    }
+  
+    &:hover {
+      background-color: rgba($grey, 0.2);
+    }
+  }
+  
+  .team {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    &:before {
+      content: url('../img/team.png');
+    }
+  }
+  
+  .career {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    &:before {
+      content: url('../img/career.png');
+    }
+  }
+  
+  .press {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+    &:before {
+      content: url('../img/press.png');
+    }
+  }
+  
+  .contact {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+    &:before {
+      content: url('../img/contact.png');
+    }
+  }
+}

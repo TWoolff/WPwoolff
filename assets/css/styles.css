@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu:wght@300;400;700&display=swap);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -393,24 +394,32 @@ header .logo {
   height: 25px;
   width: auto;
 }
-header .menu {
+
+@media (max-width: 1200px) {
+  .menu-main-container, .menu-main_eng-container {
+    display: none;
+  }
+}
+.menu-main-container .menu, .menu-main_eng-container .menu {
+  display: flex;
+  align-content: center;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-header .menu li {
+.menu-main-container .menu li, .menu-main_eng-container .menu li {
   display: inline-block;
   padding-right: 20px;
 }
-header .menu li a {
+.menu-main-container .menu li a, .menu-main_eng-container .menu li a {
   display: block;
   height: 80px;
   line-height: 80px;
 }
-header .menu .current_page_item a {
+.menu-main-container .menu .current_page_item a, .menu-main_eng-container .menu .current_page_item a {
   color: #006edc;
 }
-header .menu .menu-item-has-children .sub-menu {
+.menu-main-container .menu .menu-item-has-children .sub-menu, .menu-main_eng-container .menu .menu-item-has-children .sub-menu {
   display: none;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 70px 70px;
@@ -427,15 +436,14 @@ header .menu .menu-item-has-children .sub-menu {
   right: 0;
   padding: 50px 40px;
 }
-header .menu .menu-item-has-children:hover .sub-menu, header .menu .menu-item-has-children:focus-within .sub-menu {
+.menu-main-container .menu .menu-item-has-children:hover .sub-menu, .menu-main-container .menu .menu-item-has-children:focus-within .sub-menu, .menu-main_eng-container .menu .menu-item-has-children:hover .sub-menu, .menu-main_eng-container .menu .menu-item-has-children:focus-within .sub-menu {
   display: grid;
 }
-
-.about {
+.menu-main-container .about, .menu-main_eng-container .about {
   position: relative;
   padding-top: 140px;
 }
-.about a {
+.menu-main-container .about a, .menu-main_eng-container .about a {
   display: block;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -448,102 +456,107 @@ header .menu .menu-item-has-children:hover .sub-menu, header .menu .menu-item-ha
   line-height: 20px !important;
   height: auto !important;
 }
-.about a:hover {
+.menu-main-container .about a:hover, .menu-main_eng-container .about a:hover {
   background-color: #006edc;
   color: white;
 }
-.about a .menu-item-description {
+.menu-main-container .about a .menu-item-description, .menu-main_eng-container .about a .menu-item-description {
   position: absolute;
   top: 40px;
   left: 0;
   font-weight: 300;
   color: black;
 }
-.about:before {
+.menu-main-container .about:before, .menu-main_eng-container .about:before {
   content: "Visma Dinero";
   position: absolute;
   top: 0;
   font-size: 30px;
   font-weight: 700;
 }
-
-.team, .career, .press, .contact {
+.menu-main-container .team, .menu-main-container .career, .menu-main-container .press, .menu-main-container .contact, .menu-main_eng-container .team, .menu-main_eng-container .career, .menu-main_eng-container .press, .menu-main_eng-container .contact {
   position: relative;
   padding-left: 70px;
 }
-.team:before, .career:before, .press:before, .contact:before {
+.menu-main-container .team:before, .menu-main-container .career:before, .menu-main-container .press:before, .menu-main-container .contact:before, .menu-main_eng-container .team:before, .menu-main_eng-container .career:before, .menu-main_eng-container .press:before, .menu-main_eng-container .contact:before {
   position: absolute;
   top: 15px;
   left: 15px;
 }
-.team .menu-item-description, .career .menu-item-description, .press .menu-item-description, .contact .menu-item-description {
+.menu-main-container .team .menu-item-description, .menu-main-container .career .menu-item-description, .menu-main-container .press .menu-item-description, .menu-main-container .contact .menu-item-description, .menu-main_eng-container .team .menu-item-description, .menu-main_eng-container .career .menu-item-description, .menu-main_eng-container .press .menu-item-description, .menu-main_eng-container .contact .menu-item-description {
   position: absolute;
   top: 25px;
   left: 70px;
   font-weight: 300;
+  line-height: 40px !important;
 }
-.team a, .career a, .press a, .contact a {
+.menu-main-container .team a, .menu-main-container .career a, .menu-main-container .press a, .menu-main-container .contact a, .menu-main_eng-container .team a, .menu-main_eng-container .career a, .menu-main_eng-container .press a, .menu-main_eng-container .contact a {
   font-weight: 700;
   line-height: 40px !important;
   height: 40px !important;
 }
-.team:hover, .career:hover, .press:hover, .contact:hover {
+.menu-main-container .team:hover, .menu-main-container .career:hover, .menu-main-container .press:hover, .menu-main-container .contact:hover, .menu-main_eng-container .team:hover, .menu-main_eng-container .career:hover, .menu-main_eng-container .press:hover, .menu-main_eng-container .contact:hover {
   background-color: rgba(193, 193, 193, 0.2);
 }
-
-.team {
+.menu-main-container .team, .menu-main_eng-container .team {
   grid-column: 2/span 1;
   grid-row: 1/span 1;
 }
-.team:before {
+.menu-main-container .team:before, .menu-main_eng-container .team:before {
   content: url("../img/team.png");
 }
-
-.career {
+.menu-main-container .career, .menu-main_eng-container .career {
   grid-column: 2/span 1;
   grid-row: 2/span 1;
 }
-.career:before {
+.menu-main-container .career:before, .menu-main_eng-container .career:before {
   content: url("../img/career.png");
 }
-
-.press {
+.menu-main-container .press, .menu-main_eng-container .press {
   grid-column: 3/span 1;
   grid-row: 1/span 1;
 }
-.press:before {
+.menu-main-container .press:before, .menu-main_eng-container .press:before {
   content: url("../img/press.png");
 }
-
-.contact {
+.menu-main-container .contact, .menu-main_eng-container .contact {
   grid-column: 3/span 1;
   grid-row: 2/span 1;
 }
-.contact:before {
+.menu-main-container .contact:before, .menu-main_eng-container .contact:before {
   content: url("../img/contact.png");
 }
 
-.menu-side-container {
+.menu-side-container .menu, .menu-side_eng-container .menu {
   display: flex;
   align-content: center;
 }
-.menu-side-container .btn a {
+@media (max-width: 1200px) {
+  .menu-side-container .menu, .menu-side_eng-container .menu {
+    display: none;
+  }
+}
+.menu-side-container .menu li, .menu-side_eng-container .menu li {
+  list-style: none;
+  margin-right: 20px;
+}
+.menu-side-container .menu .btn a, .menu-side_eng-container .menu .btn a {
   line-height: 20px !important;
   height: auto !important;
 }
-.menu-side-container .btn.white a {
+.menu-side-container .menu .btn.white a, .menu-side_eng-container .menu .btn.white a {
   border: 1px solid #c1c1c1;
   color: #5d6d76;
   display: inline-block;
   padding: 10px 25px;
   border-radius: 25px;
 }
-.menu-side-container .btn.white a:hover {
+.menu-side-container .menu .btn.white a:hover, .menu-side_eng-container .menu .btn.white a:hover {
   color: #006edc;
   border: 1px solid #006edc;
   background-color: transparent;
 }
-.menu-side-container .btn.green a {
+.menu-side-container .menu .btn.green a, .menu-side_eng-container .menu .btn.green a {
   background-color: #21c18c;
   font-weight: 700;
   color: white;
@@ -551,23 +564,75 @@ header .menu .menu-item-has-children:hover .sub-menu, header .menu .menu-item-ha
   padding: 10px 25px;
   border-radius: 25px;
 }
-.menu-side-container .btn.green a:hover {
+.menu-side-container .menu .btn.green a:hover, .menu-side_eng-container .menu .btn.green a:hover {
   color: white;
   background-color: rgba(33, 193, 140, 0.9);
 }
-.menu-side-container .search a {
+.menu-side-container .menu .search a, .menu-side_eng-container .menu .search a {
   position: relative;
   padding: 10px 0;
   color: #5d6d76;
   line-height: 20px !important;
   height: auto !important;
 }
-.menu-side-container .search a:hover {
+.menu-side-container .menu .search a:hover, .menu-side_eng-container .menu .search a:hover {
   color: #006edc;
 }
-.menu-side-container .search a:before {
+.menu-side-container .menu .search a:before, .menu-side_eng-container .menu .search a:before {
   content: url("../img/search.svg");
   position: absolute;
   top: 12px;
   left: -22px;
+}
+
+.menu-mobile-nav-container {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: white;
+  width: 100vw;
+  margin: 0;
+  padding: 0 40px;
+}
+@media (max-width: 1200px) {
+  .menu-mobile-nav-container {
+    display: block;
+  }
+}
+.menu-mobile-nav-container .menu {
+  padding: 0;
+}
+.menu-mobile-nav-container .menu li {
+  list-style: none;
+}
+.menu-mobile-nav-container .menu .current_page_item a {
+  color: #006edc;
+}
+
+.burger-nav {
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 1200px) {
+  .burger-nav {
+    display: block;
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+footer li {
+  list-style: none;
+}
+footer li a {
+  color: white;
+}
+footer li a:hover {
+  color: black;
+}
+footer .current_page_item a {
+  color: black;
 }

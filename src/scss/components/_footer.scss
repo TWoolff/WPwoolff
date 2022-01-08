@@ -1,0 +1,22 @@
+footer {
+  position: fixed;
+  bottom: 0;
+
+  li {
+    list-style: none;
+
+    a {
+      color: $white;
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+
+  .current_page_item {
+    a {
+      color: $black;
+    }
+  }
+}

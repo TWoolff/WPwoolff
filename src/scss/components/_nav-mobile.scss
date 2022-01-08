@@ -1,0 +1,35 @@
+.menu-mobile-nav-container {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: $white;
+  width: 100vw;
+  margin: 0;
+  padding: 0 40px;
+
+  @include first-break-point {
+    display: block;   
+  }
+
+  .menu {
+    padding: 0;
+
+    li {
+      list-style: none;
+    }
+
+    .current_page_item a {
+      color: $blue;
+    }
+  }
+}
+
+.burger-nav {
+  display: none;
+  cursor: pointer;
+
+  @include first-break-point {
+    display: block;
+  }
+}

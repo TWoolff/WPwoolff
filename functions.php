@@ -4,6 +4,7 @@
 			'main' => __( 'Primary Menu', 'Woolff' ),
 			'side' => __( 'Side Menu', 'Woolff' ),
 			'footer-nav' => __( 'Footer Menu', 'Woolff' ),
+			'mobile-nav' => __( 'Mobile Menu', 'Woolff' ),
 		)
 	);
 

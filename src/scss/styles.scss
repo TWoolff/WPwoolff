@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu:wght@300;400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 @import 
 'utilities/normalize',
@@ -6,4 +7,8 @@
 'utilities/mixins',
 'base/typography',
 'base/global',
-'components/header';
+'components/header',
+'components/nav-main',
+'components/nav-side',
+'components/nav-mobile',
+'components/footer';
