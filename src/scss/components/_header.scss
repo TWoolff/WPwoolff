@@ -29,6 +29,10 @@ header {
       }
     }
 
+  .current_page_item a {
+    color: $blue;
+  }
+
     .menu-item-has-children {
       .sub-menu {
         display: none;

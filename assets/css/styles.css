@@ -407,6 +407,9 @@ header .menu li a {
   height: 80px;
   line-height: 80px;
 }
+header .menu .current_page_item a {
+  color: #006edc;
+}
 header .menu .menu-item-has-children .sub-menu {
   display: none;
   grid-template-columns: 1fr 1fr 1fr;
