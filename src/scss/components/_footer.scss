@@ -2,6 +2,12 @@ footer {
   position: fixed;
   bottom: 0;
 
+  .menu {
+    @include second-break-point {
+      padding: 0 20px;  
+    }  
+  }
+
   li {
     list-style: none;
 

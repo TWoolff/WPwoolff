@@ -12,41 +12,6 @@
       margin-right: 20px;
     }
   
-    .btn {
-      a {
-        line-height: 20px !important;
-        height: auto !important;
-      }
-  
-      &.white a {
-        border: 1px solid $grey;
-        color: $darkgrey;
-        display: inline-block;
-        padding: 10px 25px;
-        border-radius: 25px;
-  
-        &:hover {
-          color: $blue;
-          border: 1px solid $blue;
-          background-color: transparent;
-        }
-      } 
-  
-      &.green a {
-        background-color: $green;
-        font-weight: 700;
-        color: $white;
-        display: inline-block;
-        padding: 10px 25px;
-        border-radius: 25px;
-  
-        &:hover {
-          color: $white;
-          background-color: rgba($green, 0.9);
-        }
-      }
-    }
-  
     .search a {
       position: relative;
       padding: 10px 0;
@@ -64,6 +29,48 @@
         top: 12px;
         left: -22px;
       }
+    }
+  }
+}
+
+.btn {
+  a {
+    line-height: 20px !important;
+    height: auto !important;
+  }
+
+  &.white a {
+    border: 1px solid $grey;
+    color: $darkgrey;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 25px;
+
+    &:hover {
+      color: $blue;
+      border: 1px solid $blue;
+      background-color: transparent;
+    }
+  } 
+
+  &.green a {
+    background-color: $green;
+    font-weight: 700;
+    color: $white;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 25px;
+
+    @include first-break-point {
+      width: 100%;
+      padding: 20px 25px;
+      border-radius: 50px;
+      text-align: center;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: rgba($green, 0.9);
     }
   }
 }

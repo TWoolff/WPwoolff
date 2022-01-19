@@ -1,15 +1,21 @@
 .menu-mobile-nav-container {
   display: none;
   position: absolute;
-  top: 60px;
-  right: 0;
-  background-color: $white;
-  width: 100vw;
+  top: 82px;
+  left: 0;
+  background-color: lighten($grey, 20%);
+  width: 500px;
+  height: calc(100vh - 80px);
   margin: 0;
-  padding: 0 40px;
+  padding: 10px 40px;
 
   @include first-break-point {
     display: block;   
+  }
+
+  @include second-break-point {
+    padding: 0 20px;  
+    width: 100%;
   }
 
   .menu {
@@ -17,10 +23,32 @@
 
     li {
       list-style: none;
+      padding: 10px;
+      font-size: 18px;
+
+      &:hover {
+        background-color: lighten($grey, 15%);
+      }
+    }
+
+    .btn {
+      &:hover {
+        background-color: transparent;
+      }
     }
 
     .current_page_item a {
       color: $blue;
+    }
+
+    .sub-menu {
+      padding: 10px 10px 0 20px;
+
+      li {
+        font-size: 16px;
+      }
+
+     
     }
   }
 }
